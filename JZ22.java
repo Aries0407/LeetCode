@@ -5,6 +5,7 @@ public class JZ22 {
 
     }
 
+    //双指针
     public ListNode getKthFromEnd(ListNode head, int k) {
         int count = 0;
         ListNode fast = head;
