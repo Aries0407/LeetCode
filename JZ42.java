@@ -8,7 +8,20 @@ public class JZ42 {
 
     }
 
+    //不修原数组
     public int maxSubArray(int[] nums) {
+        if(nums==null || nums.length == 0) return 0;
+        int sum = nums[0];
+        int max = nums[0];
+        for(int i = 1 ; i < nums.length ; i++){
+            sum = sum + nums[i] > nums[i] ? sum + nums[i] : nums[i] ;
+            max = Math.max(sum,max);
+        }
+        return max;
+    }
+
+    //修改原数组
+    public int maxSubArray2(int[] nums) {
         int max = nums[0];
         for (int i = 1; i < nums.length; i++) {
             nums[i] += Math.max(nums[i-1],0);
