@@ -20,7 +20,6 @@ public class JZ9 {
             stack.push(stackHelp.pop());
         }
     }
-
     int deleteHead() {
         return stack.empty() ? -1 : stack.pop();
     }
